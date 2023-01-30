@@ -1,0 +1,19 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080 # replace with OpenFaaS gateway address
+functions:
+  collocate_results:
+    lang: python3-flask
+    handler: ../functions/collocate_results    
+    image: mashahh/collocate_results
+
+  itemset_generation:
+    lang: python3-flask
+    handler: ../functions/itemset_generation    
+    image: mashahh/itemset_generation
+
+  rule_generation:
+    lang: python3-flask
+    handler: ../functions/rule_generation    
+    image: mashahh/rule_generation

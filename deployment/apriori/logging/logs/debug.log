@@ -1,0 +1,20 @@
+2023-01-30 19:43:04,268 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:123] Using UNIX Socket for connecting to Docker Host. from Demo
+2023-01-30 19:43:04,381 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:74] Docker network for function containers already exits! Make sure this is set up correctly! from Demo
+2023-01-30 19:43:04,443 INFO [pool-1-thread-1] a.u.d.e.c.v.VerticleManager [VerticleManager.java:62] Deployed 40 verticles. from Demo
+2023-01-30 19:43:04,458 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:216] Pull command image mashahh/itemset_generation from Demo
+2023-01-30 19:43:04,463 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:216] Pull command image mashahh/collocate_results from Demo
+2023-01-30 19:43:04,467 INFO [pool-1-thread-1] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:216] Pull command image mashahh/rule_generation from Demo
+2023-01-30 19:43:05,983 INFO [docker-java-stream-881475638] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:209] Pulled image mashahh/rule_generation. from Demo
+2023-01-30 19:43:05,983 INFO [docker-java-stream-1740601476] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:209] Pulled image mashahh/collocate_results. from Demo
+2023-01-30 19:43:05,983 INFO [docker-java-stream--1839772685] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:209] Pulled image mashahh/itemset_generation. from Demo
+2023-01-30 19:43:05,984 INFO [docker-java-stream-881475638] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:210] Returned pull status Status: Image is up to date for mashahh/rule_generation. from Demo
+2023-01-30 19:43:05,984 INFO [docker-java-stream--1839772685] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:210] Returned pull status Status: Image is up to date for mashahh/itemset_generation. from Demo
+2023-01-30 19:43:05,984 INFO [docker-java-stream-1740601476] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:210] Returned pull status Status: Image is up to date for mashahh/collocate_results. from Demo
+2023-01-30 19:43:06,058 INFO [docker-java-stream--1839772685] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:258] Starting container from Demo
+2023-01-30 19:43:06,058 INFO [docker-java-stream-881475638] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:258] Starting container from Demo
+2023-01-30 19:43:06,058 INFO [docker-java-stream-1740601476] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:258] Starting container from Demo
+2023-01-30 19:43:07,854 INFO [vert.x-eventloop-thread-9] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:281] running! from Demo
+2023-01-30 19:43:07,854 INFO [vert.x-eventloop-thread-10] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:281] running! from Demo
+2023-01-30 19:43:08,894 INFO [vert.x-eventloop-thread-11] a.u.d.e.d.m.ContainerManagerDockerAPI [ContainerManagerDockerAPI.java:281] running! from Demo
+2023-01-30 19:43:08,897 INFO [vert.x-eventloop-thread-11] a.u.d.e.c.c.Control [Control.java:63] Pausing enactment. from Demo
+2023-01-30 19:43:55,588 INFO [AWT-EventQueue-0] a.u.d.e.c.c.Control [Control.java:53] Resuming enactment. from Demo

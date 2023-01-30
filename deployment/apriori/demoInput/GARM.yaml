@@ -1,0 +1,104 @@
+---
+name: "GARM"
+dataIns:
+- name: "transactions"
+  type: "collection"
+  source: "transactions"
+- name: "min_support"
+  type: "number"
+  source: "min_support"
+- name: "min_confidence"
+  type: "number"
+  source: "min_confidence"
+- name: "max_length"
+  type: "number"
+  source: "max_length"
+workflowBody:
+- parallelFor:
+    name: "forEachClass"
+    dataIns:
+    - name: "class_transactions"
+      type: "collection"
+      source: "GARM/transactions"
+    iterators: ["class_transactions"]
+    loopBody:
+    - function:
+        name: "itemset_generation"
+        type: "itemset_generation"
+        dataIns:
+        - name: "transactions"
+          type: "collection"
+          source: "forEachClass/class_transactions"
+        - name: "min_support"
+          type: "number"
+          source: "GARM/min_support"
+        - name: "max_length"
+          type: "number"
+          source: "GARM/max_length"
+        - name: "verbosity"
+          type: "number"
+          source: 0
+        dataOuts:
+        - name: "itemsets_raw"
+          type: "string"
+        - name: "num_trans"
+          type: "number"
+        - name: "class_name"
+          type: "string"
+    - function:
+        name: "rule_generation"
+        type: "rule_generation"
+        dataIns:
+        - name: "itemsets_raw"
+          type: "string"
+          source: "itemset_generation/itemsets_raw"
+        - name: "min_confidence"
+          type: "number"
+          source: "GARM/min_confidence"
+        - name: "num_trans"
+          type: "number"
+          source: "itemset_generation/num_trans"
+        - name: "verbosity"
+          type: "number"
+          source: 0
+        dataOuts:
+        - name: "itemsets"
+          type: "string"
+        - name: "rules"
+          type: "string"
+    dataOuts:
+    - name: "itemsets"
+      type: "collection"
+      source: "rule_generation/itemsets"
+    - name: "rules"
+      type: "collection"
+      source: "rule_generation/rules"
+    - name: "num_trans"
+      type: "collection"
+      source: "itemset_generation/num_trans"
+    - name: "class_name"
+      type: "collection"
+      source: "itemset_generation/class_name"
+- function:
+    name: "collocate_results"
+    type: "collocate_results"
+    dataIns:
+    - name: "itemsets_raw"
+      type: "collection"
+      source: "forEachClass/itemsets"
+    - name: "rules"
+      type: "collection"
+      source: "forEachClass/rules"
+    - name: "num_trans"
+      type: "collection"
+      source: "forEachClass/num_trans"
+    - name: "class_name"
+      type: "collection"
+      source: "forEachClass/class_name"
+    dataOuts:
+    - name: "analysis_results"
+      type: "string"
+dataOuts:
+- name: "apollo_output"
+  type: "string"
+  source: "collocate_results/analysis_results"

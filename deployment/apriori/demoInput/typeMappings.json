@@ -1,0 +1,35 @@
+[
+	{
+		"functionType": "collocate_results",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "mashahh/collocate_results"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "itemset_generation",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "mashahh/itemset_generation"
+				}
+			}
+		]
+	},
+	{
+		"functionType": "rule_generation",
+		"resources": [
+			{
+				"type": "Local",
+				"properties": {
+					"Image": "mashahh/rule_generation"
+				}
+			}
+		]
+	}
+]
